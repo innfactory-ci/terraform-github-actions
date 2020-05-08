@@ -8,6 +8,7 @@ function installAWSIAMAuthenticator {
     mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
     echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
     echo "I will use the [$AWS_PROFILE] aws profile."
+    mkdir -p ~/.aws
     cp $AWS_SHARED_CREDENTIALS_FILE ~/.aws/credentials
     echo "test"
     aws-iam-authenticator token  -i siteco-zs-production
