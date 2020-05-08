@@ -124,7 +124,6 @@ function main {
   source ${scriptDir}/terraform_import.sh
   source ${scriptDir}/terraform_taint.sh
   source ${scriptDir}/terraform_destroy.sh
-  #source ${scriptDir}/aws_iam_authenticator.sh
 
   parseInputs
   configureCLICredentials
@@ -132,47 +131,38 @@ function main {
 
   case "${tfSubcommand}" in
     fmt)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformFmt ${*}
       ;;
     init)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformInit ${*}
       ;;
     validate)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformValidate ${*}
       ;;
     plan)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformPlan ${*}
       ;;
     apply)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformApply ${*}
       ;;
     output)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformOutput ${*}
       ;;
     import)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformImport ${*}
       ;;
     taint)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformTaint ${*}
       ;;
     destroy)
-      #installAWSIAMAuthenticator
       installTerraform
       terraformDestroy ${*}
       ;;
