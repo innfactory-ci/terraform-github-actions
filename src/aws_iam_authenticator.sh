@@ -9,6 +9,6 @@ function installAWSIAMAuthenticator {
     echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
     echo "I will use the [$AWS_PROFILE] aws profile."
     echo "test"
-    kubectl get namespaces --kubeconfig k8s_conf/kubeconfig_siteco-zs-production  
+    aws-iam-authenticator token  -i $CLUSTER  
     echo "test end"
 }
